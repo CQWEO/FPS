@@ -120,6 +120,19 @@ workspace.DescendantAdded:Connect(function(descendant)
   elseif descendant:IsA("Shirt") or descendant:IsA("Pants") then
     handleClothing(descendant)
   end
+end
+
+-- Remove
+workspace.RemoveAdded:Connect(function(Remove)
+  if remove:IsA("Tree") and not remove:IsA("MeshPart") then
+     handleTree(remove)
+  elseif remove:IsA("Glass") or remove;IsA("Texture") then
+    handleGlassTexture(remove)
+  elseif remove:IsA("Part") or remove;IsA("Texture") then
+    handlePartTexture(Remove)
+  elseif remove:IsA("Trees") or remove;IsA("Texture") then
+    handleTreesTexture(remove)
+  end
 end)
 
 print("Anti-lag script loaded successfully!")
